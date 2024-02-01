@@ -11,10 +11,11 @@
   text-align: center;
 }
 body {
-  width: 50vw;
+  width: 100vw;
   min-height: 100vh;
   margin: 0 auto;
   background-color: #3d5a6a;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 button {
   cursor: pointer;
@@ -23,6 +24,7 @@ button {
   background: none;
   font-size: 1rem;
   color: #ffffff;
-  padding: 1rem;
+  padding: .5rem;
   width: 33.33%;
+  font-size: .9rem;
 }

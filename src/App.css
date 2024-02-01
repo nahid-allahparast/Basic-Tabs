@@ -15,11 +15,11 @@
   z-index: 2;
 }
 .tab-content {
-  padding-top: 6rem;
+  padding-top: 4rem;
   padding-bottom: 1rem;
   width: 95%;
   background-color: #ffc10a;
-  margin-top: -5rem;
+  margin-top: -3.5rem;
 }
 .active {
   background-color: #fff;

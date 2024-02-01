@@ -1,13 +1,14 @@
+import { useState } from "react";
 import "./App.css";
 const tabData = [
   {
     id: 1,
-    title: "ITEM 1",
+    title: "HOME",
     content: "Authorize the user data ✅",
   },
   {
     id: 2,
-    title: "ITEM 2",
+    title: "CART",
     content: "Redirect user to cart page 🛒",
   },
   {
@@ -17,12 +18,17 @@ const tabData = [
   },
 ];
 const App = () => {
-  const activTab = 1;
+  const [activTab, setactivTab] = useState(1);
+  //   const activTab = 2;
   return (
     <div className="tab">
       <div className="tab-header">
         {tabData.map((tab) => (
-          <button className={activTab === tab.id ? "active" : ""}>
+          <button
+            onClick={() => setactivTab(tab.id)}
+            key={tab.id}
+            className={activTab === tab.id ? "active" : ""}
+          >
             {tab.title}
           </button>
         ))}
@@ -31,5 +37,7 @@ const App = () => {
     </div>
   );
 };
+
+
 
 export default App;
