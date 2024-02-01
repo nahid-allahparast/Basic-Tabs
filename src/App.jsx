@@ -13,31 +13,36 @@ const tabData = [
   },
   {
     id: 3,
-    title: "ITEM 3",
+    title: "USER",
     content: "Create new payment for the user 💰",
   },
 ];
 const App = () => {
-  const [activTab, setactivTab] = useState(1);
-  //   const activTab = 2;
+  const [activTab, setActivTab] = useState(1);
+  const [isShow, setIsShow] = useState(false);
   return (
-    <div className="tab">
-      <div className="tab-header">
-        {tabData.map((tab) => (
-          <button
-            onClick={() => setactivTab(tab.id)}
-            key={tab.id}
-            className={activTab === tab.id ? "active" : ""}
-          >
-            {tab.title}
-          </button>
-        ))}
-      </div>
-      <div className="tab-content">{tabData[activTab - 1].content}</div>
+    <div>
+      <button onClick={() => setIsShow((isShow) => !isShow)}>
+        {isShow ? "HIDE" : "SHOW"}
+      </button>
+      {isShow && (
+        <div className="tab">
+          <div className="tab-header">
+            {tabData.map((tab) => (
+              <button
+                onClick={() => setActivTab(tab.id)}
+                key={tab.id}
+                className={activTab === tab.id ? "active" : ""}
+              >
+                {tab.title}
+              </button>
+            ))}
+          </div>
+          <div className="tab-content">{tabData[activTab - 1].content}</div>
+        </div>
+      )}
     </div>
   );
 };
-
-
 
 export default App;
