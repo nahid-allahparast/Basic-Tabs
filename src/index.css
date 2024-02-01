@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+body {
+  width: 50vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #3d5a6a;
+}
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 1rem;
+  width: 33.33%;
+}
